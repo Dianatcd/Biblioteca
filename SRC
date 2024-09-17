@@ -1,0 +1,19 @@
+drop database if exists biblioteca; 
+set sql_safe_update = 0;
+create database biblioteca; 
+use biblioteca;
+
+create table Autores( 
+IdAutor int auto_increment primary key,
+Nome varchar(110) not null,
+Nacionalidade varchar(100)
+);
+
+create table livros(
+IdLivro int auto_increment key,
+Titulo varchar(255) not null,
+IdAutor int,
+AnoPublicação year, 
+genero varchar(50)
+);
+
